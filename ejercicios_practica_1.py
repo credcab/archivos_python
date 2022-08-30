@@ -18,7 +18,7 @@ def ej1():
     # el diccionario vacio debe llamarse "stock"
     
     # stock = ....
-
+    
     # Luego de crear el diccionario completelo
     # con el siguiente stock:
     # tornillos = 100
@@ -33,6 +33,12 @@ def ej1():
 
     # Comenzar aquí, recuerde el identado dentro de esta funcion
 
+    stock = {}
+    stock['tornillos'] = 100
+    stock['tuercas'] = 150
+    stock['arandelas'] = 300
+    print(stock)
+
 
 def ej2():
     print('Ejercicio con diccionarios 2º')
@@ -40,7 +46,7 @@ def ej2():
     # como una base de datos. Comenzaremos con un diccionario de stock
     # de nuestros productos en cero:
     
-    strock = {'tornillos': 0, 'tuercas': 0, 'arandelas': 0}
+    stock = {'tornillos': 0, 'tuercas': 0, 'arandelas': 0}
 
     # Paso 1:
     # Crear un bucle utilizando while que se ejecute de forma infinita
@@ -66,7 +72,30 @@ def ej2():
     # imprimir en pantalla con print el diccionario con el stock final
 
     # Comenzar aquí, recuerde el identado dentro de esta funcion
-
+    cantidad = 0
+    while 4 == 4:
+        print('¿que deseas agregar a nuestro stock tornillos, tuercas o arandelas?')
+        print('si indicas fin o FIN se termina el agregado de stock')
+        agregar = str(input())
+        if agregar == 'tornillos':
+            print('¿cuantos tornillos deseas agregar?')
+            cantidad = int(input())
+            stock['tornillos'] = stock['tornillos'] + cantidad
+        elif agregar == 'tuercas':
+            print('¿cuantas tuercas deseas agregar?')
+            cantidad = int(input())
+            stock['tuercas'] = stock['tuercas'] + cantidad
+        elif agregar == 'arandelas':
+            print('¿cuantas arandelas deseas agregar?')
+            cantidad = int(input())
+            stock['arandelas'] = stock['arandelas'] + cantidad
+        elif agregar == 'fin' or agregar == 'FIN':
+            print('el stock completo es:', stock)
+            break
+        else:
+            print('error en el pedido, vuelve a leer las instruciones del inicio')
+        
+        
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
